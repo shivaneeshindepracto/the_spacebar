@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+
+<div>
+    <p>here we can add body of the template</p>
+</div>
+
+<h1>Comments ({{ comments|length }})</h1>
+
+<div>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+    {% endfor %}
+</div>
+
+{% endblock %}
